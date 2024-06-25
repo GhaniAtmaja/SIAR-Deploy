@@ -1,0 +1,409 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* #region  /**=========== Primary Color =========== */
+  --tw-color-primary-50: 239 246 255;
+  --tw-color-primary-100: 219 234 254;
+  --tw-color-primary-200: 191 219 254;
+  --tw-color-primary-300: 147 197 253;
+  --tw-color-primary-400: 96 165 250;
+  --tw-color-primary-500: 59 130 246;
+  --tw-color-primary-600: 37 99 235;
+  --tw-color-primary-700: 29 78 216;
+  --tw-color-primary-800: 30 64 175;
+  --tw-color-primary-900: 30 58 138;
+  --tw-color-primary-950: 23 37 84;
+  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #eff6ff */
+  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #dbeafe */
+  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #bfdbfe */
+  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #93c5fd */
+  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #60a5fa */
+  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #3b82f6 */
+  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #2563eb */
+  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #1d4ed8 */
+  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #1e40af */
+  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #1e3a8a */
+  --color-primary-950: rgb(var(--tw-color-primary-950)); /* #172554 */
+  /* #endregion  /**======== Primary Color =========== */
+}
+
+@layer base {
+  /* #region  /**=========== Fonts =========== */
+  html {
+    scroll-behavior: smooth !important;
+    /* With scroll padding, the text will scroll 1 rem below the navigation bar and banner (which total height is 64px + 4rem). */
+    scroll-padding: calc(4rem);
+  }
+
+  @font-face {
+    font-family: 'Cal-Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-display: optional;
+    src: url('/fonts/Cal-Sans/CalSans-SemiBold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Matter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Matter';
+    font-style: italic;
+    font-weight: 400;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-RegularItalic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Matter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-Medium.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Matter';
+    font-style: italic;
+    font-weight: 500;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-MediumItalic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Matter';
+    font-style: normal;
+    font-weight: 600;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-SemiBold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Matter';
+    font-style: italic;
+    font-weight: 600;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-SemiBoldItalic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Matter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-Bold.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Matter';
+    font-style: italic;
+    font-weight: 700;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-BoldItalic.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Matter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-Heavy.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Matter';
+    font-style: italic;
+    font-weight: 900;
+    font-display: optional;
+    src: url('/fonts/Matter/Matter-Heavy.woff2') format('woff2');
+  }
+
+  .cursor-newtab {
+    cursor:
+      url('/images/new-tab.png') 10 10,
+      pointer;
+  }
+
+  /* #region  /**=========== Typography =========== */
+  .j1 {
+    @apply font-heading text-5xl font-semibold;
+  }
+  .j2 {
+    @apply font-heading text-4xl font-semibold;
+  }
+  .j3 {
+    @apply font-heading text-3xl font-semibold;
+  }
+
+  h1,
+  .h1 {
+    @apply font-heading text-2xl font-semibold;
+  }
+  h2,
+  .h2 {
+    @apply font-heading text-xl font-semibold;
+  }
+  h3,
+  .h3 {
+    @apply font-heading text-lg font-semibold;
+  }
+  h4,
+  .h4 {
+    @apply font-body text-lg font-bold;
+  }
+  h5,
+  .h5 {
+    @apply font-heading text-base font-semibold;
+  }
+  h6,
+  .h6 {
+    @apply font-heading text-sm font-semibold;
+  }
+
+  .s1 {
+    @apply font-body text-lg font-medium;
+  }
+  .s2 {
+    @apply font-body text-base font-medium;
+  }
+  .s3 {
+    @apply font-body text-sm font-medium;
+  }
+
+  .b1 {
+    @apply font-body text-lg font-normal;
+  }
+  .b2 {
+    @apply font-body text-base font-normal;
+  }
+  .b3 {
+    @apply font-body text-sm font-normal;
+  }
+
+  .c1 {
+    @apply font-body text-xs font-normal;
+  }
+  .c2 {
+    @apply font-body text-[11px] font-normal leading-[14px];
+  }
+
+  body {
+    @apply font-body text-typo text-base;
+  }
+  /* #endregion  /**======== Typography =========== */
+
+  .layout {
+    /* 1100px */
+    max-width: 68.75rem;
+    @apply mx-auto w-11/12;
+  }
+
+  .dashboard-layout {
+    @apply mx-auto w-[92%] max-w-6xl md:w-[95%];
+  }
+
+  .bg-dark a.custom-link {
+    @apply border-gray-200 hover:border-gray-200/0;
+  }
+
+  /* Class to adjust with sticky footer */
+  .min-h-main {
+    @apply min-h-[calc(100vh-4rem)];
+  }
+}
+
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(
+        to right,
+        var(--color-primary-400),
+        var(--color-primary-500)
+      );
+    background-size:
+      100% 2px,
+      0 2px;
+    background-position:
+      100% 100%,
+      0 100%;
+    background-repeat: no-repeat;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .animated-underline {
+      transition: 0.3s ease;
+      transition-property: background-size, color, background-color,
+        border-color;
+    }
+  }
+  .animated-underline:hover,
+  .animated-underline:focus-visible {
+    background-size:
+      0 2px,
+      100% 2px;
+  }
+}
+
+/* #region  /**=========== Datepicker =========== */
+.react-datepicker-wrapper {
+  display: block;
+  width: 100%;
+}
+
+.react-datepicker__navigation.react-datepicker__navigation--previous,
+.react-datepicker__navigation.react-datepicker__navigation--next {
+  top: 6px;
+}
+
+.react-datepicker__header__dropdown.react-datepicker__header__dropdown--select {
+  padding: 0 5px;
+}
+
+.react-datepicker__header__dropdown {
+  margin-top: 0.5rem;
+}
+
+.react-datepicker__year-select,
+.react-datepicker__month-select {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.7rem;
+  border-radius: 0.25rem;
+}
+
+/* Selected date color */
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range,
+.react-datepicker__year-text--selected,
+.react-datepicker__year-text--in-selecting-range,
+.react-datepicker__year-text--in-range,
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  @apply !bg-primary-500;
+  @apply !text-white;
+}
+/* #endregion  /**======== Datepicker =========== */
+
+/* #region  /**=========== DropzoneInput Border =========== */
+/** @see https://kovart.github.io/dashed-border-generator/ */
+.dropzone-border-dash {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23D1D5DBFF' stroke-width='2' stroke-dasharray='7' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 0.5rem;
+}
+.dropzone-border-dash-error {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='%23EF4444FF' stroke-width='2' stroke-dasharray='7' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 0.5rem;
+}
+/* #endregion  /**======== DropzoneInput Border =========== */
+
+/* #region  /**=========== Scrollbar =========== */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #7b7b7b;
+  opacity: 0.5;
+  border-radius: 10px;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #7b7b7b #f7f7f7;
+}
+/* #endregion  /**======== Scrollbar =========== */
+
+.soft-shadow {
+  box-shadow:
+    0px 12px 24px 0px rgba(20, 20, 43, 0.04),
+    0px -2px 4px 0px rgba(20, 20, 43, 0.02),
+    0px 3px 14px 0px rgba(74, 58, 255, 0.03);
+}
+
+/* Ornamen Tersedia Start css */
+/* align left row flex, margin 15 */
+/* .flexl { */
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 5px;
+}
+
+.common {
+  background-color: #000;
+  border: 2px solid #000;
+}
+.coin {
+  color: #fdaa40;
+}
+.details {
+  padding: 1rem;
+  padding-bottom: 0px;
+}
+.uncommon {
+  background-color: #4ade80;
+  border: 2px solid #4ade80;
+}
+
+.rare {
+  background-color: #22d3ee;
+  border: 2px solid #22d3ee;
+}
+
+.unique {
+  background-color: #a78bfa;
+  border: 2px solid #a78bfa;
+}
+
+.legend {
+  background-color: #fb923c;
+  border: 2px solid #fb923c;
+}
+
+.mythic {
+  background-color: #dc2626;
+  border: 2px solid #dc2626;
+}
+
+.price {
+  color: #fdaa40;
+  text-align: center;
+}
+.rarity {
+  margin-right: 20px;
+}
+
+.cancel {
+  border-radius: 30px;
+  background-color: #ef4444;
+
+  align-self: center;
+}
+
+.confirm {
+  border-radius: 30px;
+  background-color: #84cc16;
+
+  align-self: center;
+}
+
+.ctext {
+  color: #f7f7f7;
+}
