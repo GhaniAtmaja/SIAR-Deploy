@@ -5,62 +5,61 @@ import {
   CheckCircledIcon,
   CircleIcon,
   CrossCircledIcon,
-  QuestionMarkCircledIcon,
   StopwatchIcon,
-} from "@radix-ui/react-icons"
+} from '@radix-ui/react-icons';
 
 export const labels = [
   {
-    value: "food1",
-    label: "Food1",
+    value: 'food1',
+    label: 'Food1',
   },
   {
-    value: "food2",
-    label: "Food2",
+    value: 'food2',
+    label: 'Food2',
   },
   {
-    value: "food3",
-    label: "Food3",
+    value: 'food3',
+    label: 'Food3',
   },
-]
+];
 
 export const statuses = [
   {
-    value: "todo",
-    label: "Todo",
+    value: 'todo',
+    label: 'Todo',
     icon: CircleIcon,
   },
   {
-    value: "in progress",
-    label: "In Progress",
+    value: 'in progress',
+    label: 'In Progress',
     icon: StopwatchIcon,
   },
   {
-    value: "done",
-    label: "Done",
+    value: 'done',
+    label: 'Done',
     icon: CheckCircledIcon,
   },
   {
-    value: "canceled",
-    label: "Canceled",
+    value: 'canceled',
+    label: 'Canceled',
     icon: CrossCircledIcon,
   },
-]
+];
 
 export const pendampingan = [
   {
-    label: "Ichlas",
-    value: "ichlas",
+    label: 'Ichlas',
+    value: 'ichlas',
     icon: ArrowDownIcon,
   },
   {
-    label: "Fico",
-    value: "fico",
+    label: 'Fico',
+    value: 'fico',
     icon: ArrowRightIcon,
   },
   {
-    label: "Ghani",
-    value: "ghani",
+    label: 'Ghani',
+    value: 'ghani',
     icon: ArrowUpIcon,
   },
-]
+];

@@ -1,8 +1,6 @@
-import { CheckCircle } from 'lucide-react';
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
 import * as React from 'react';
 
-import TypographyAlert from '@/components/alert/TypographyAlert';
 import withAuth from '@/components/hoc/withAuth';
 import DashboardLayout from '@/components/layout/dashboard/DashboardLayout';
 import PageHeader from '@/components/layout/dashboard/PageHeader';
@@ -11,9 +9,6 @@ import Seo from '@/components/Seo';
 import useAjuanStore from '@/store/useAjuanStore';
 
 import { AjuanDataType } from '@/content/ajuan';
-import DocumentDetailCard from '@/pages/pendampingan/components/DocumentDetailCard';
-import ProductDetailCard from '@/pages/pendampingan/components/ProductDetailCard';
-import ShopDetailCard from '@/pages/pendampingan/components/ShopDetailCard';
 
 export default withAuth('optional')(AjuanPage);
 function AjuanPage({
@@ -27,17 +22,16 @@ function AjuanPage({
       <Seo templateTitle='Detail Ajuan Matching' />
 
       <main className='py-12 flex flex-col gap-8'>
-        
         <PageHeader
-            className='z-10'
-            backHref='/matching-list'
-            crumbs={['/dashboard', '/matching-list', '/id']}
+          className='z-10'
+          backHref='/matching-list'
+          crumbs={['/dashboard', '/matching-list', '/id']}
         >
           <PageHeader.Title>{data.nama}</PageHeader.Title>
         </PageHeader>
 
         <section className='dashboard-layout grid z-10 gap-6 lg:grid-cols-3'>
-        {/* Content Here */}
+          {/* Content Here */}
         </section>
 
         {/* <section className='flex flex-col gap-6 z-10'>
@@ -86,8 +80,6 @@ export const getServerSideProps = async (
   };
 };
 
-
-
 // import * as React from 'react';
 
 // import withAuth from '@/components/hoc/withAuth';
@@ -132,7 +124,6 @@ export const getServerSideProps = async (
 //     </DashboardLayout>
 //   );
 // }
-
 
 // import { CheckCircle } from 'lucide-react';
 // import { GetServerSidePropsContext, InferGetServerSidePropsType } from 'next';
@@ -216,4 +207,3 @@ export const getServerSideProps = async (
 //     },
 //   };
 // };
-

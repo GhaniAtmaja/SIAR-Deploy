@@ -1,6 +1,4 @@
 import { promises as fs } from 'fs';
-import { Metadata } from 'next';
-import Image from 'next/image';
 import path from 'path';
 import * as React from 'react';
 import { z } from 'zod';
@@ -9,14 +7,12 @@ import withAuth from '@/components/hoc/withAuth';
 import DashboardLayout from '@/components/layout/dashboard/DashboardLayout';
 import PageHeader from '@/components/layout/dashboard/PageHeader';
 import Seo from '@/components/Seo';
-import Typography from '@/components/typography/Typography';
 
 import useAuthStore from '@/store/useAuthStore';
 
 import { columns } from './components/columns';
 import { DataTable } from './components/data-table';
 import { taskSchema } from './data/schema';
-
 
 // export const metadata: Metadata = {
 //   title: 'Tasks',
@@ -26,7 +22,7 @@ import { taskSchema } from './data/schema';
 // Simulate a database read for tasks.
 async function getTasks() {
   const data = await fs.readFile(
-    path.join(process.cwd(), 'src/pages/matching-list/data/tasks.json')
+    path.join(process.cwd(), 'src/pages/matching-list/data/tasks.json'),
   );
 
   const tasks = JSON.parse(data.toString());
@@ -49,14 +45,13 @@ const DashboardPage = ({ tasks }) => {
       <Seo templateTitle='Ajuan Matching' />
 
       <main className='py-12 flex flex-col gap-8 '>
-            <PageHeader
-              className='z-10'
-              backHref='/dashboard'
-              crumbs={['/dashboard', '/matching-list']}
-            >
-              <PageHeader.Title>Ajuan Matching</PageHeader.Title>
-            </PageHeader>
-        
+        <PageHeader
+          className='z-10'
+          backHref='/dashboard'
+          crumbs={['/dashboard', '/matching-list']}
+        >
+          <PageHeader.Title>Ajuan Matching</PageHeader.Title>
+        </PageHeader>
 
         {/* <section className='dashboard-layout flex z-10 justify-between'>
           <div>
@@ -83,8 +78,7 @@ const DashboardPage = ({ tasks }) => {
 
         <section className='dashboard-layout grid z-10 gap-6 lg'>
           <div className='container mx-auto py-5 bg-white p-4 rounded-[0.5rem] shadow-md'>
-
-            <div> 
+            <div>
               <DataTable data={tasks} columns={columns} />
             </div>
           </div>
@@ -105,4 +99,3 @@ const DashboardPage = ({ tasks }) => {
 };
 
 export default withAuth('optional')(DashboardPage);
-

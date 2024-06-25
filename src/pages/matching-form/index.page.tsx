@@ -3,7 +3,6 @@ import * as React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
 
-import { validatePassword } from '@/lib/form-utils';
 import { generateOptions } from '@/lib/generate-options';
 import logger from '@/lib/logger';
 import {
@@ -13,17 +12,13 @@ import {
 
 import Button from '@/components/buttons/Button';
 import Input from '@/components/forms/Input';
-import PasswordInput from '@/components/forms/PasswordInput';
 import SearchableSelectInput from '@/components/forms/SearchableSelectInput';
 import withAuth, { LOGIN_ROUTE } from '@/components/hoc/withAuth';
 import Layout from '@/components/layout/Layout';
-import PrimaryLink from '@/components/links/PrimaryLink';
 import NextImage from '@/components/NextImage';
 import Seo from '@/components/Seo';
-import Typography from '@/components/typography/Typography';
 
 import REGEX from '@/constant/regex';
-import { AUTH_LINKS } from '@/content/header';
 import AuthSection from '@/pages/auth/components/AuthSection';
 import {
   RegisterBody,
@@ -97,10 +92,9 @@ function LoginPage() {
         citiesOptions.find((city) => city.value === data.city_id)?.label ?? '',
       region_kecamatan:
         subdistrictsOptions.find(
-          (subdistrict) => subdistrict.value === data.subdistrict_id
+          (subdistrict) => subdistrict.value === data.subdistrict_id,
         )?.label ?? '',
-      food:
-        food.find((item) => item.id === data.food_id)?.name ?? '',
+      food: food.find((item) => item.id === data.food_id)?.name ?? '',
     };
     logger({ body }, 'Register');
     register(body).then(() => {
@@ -324,7 +318,10 @@ function LoginPage() {
                   <SearchableSelectInput
                     id='food_id'
                     label='Jenis Produk'
-                    options={food.map(item => ({ value: item.id, label: item.name }))}
+                    options={food.map((item) => ({
+                      value: item.id,
+                      label: item.name,
+                    }))}
                     isLoading={false}
                     placeholder='Pilih Jenis Produk'
                     validation={{

@@ -2,9 +2,9 @@
 
 This is a template for creating applications using Next.js 14 (pages directory) and NextUI (v2).
 
->Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
+> Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
 >
->Read more: [Pages Router](https://nextjs.org/docs/pages)
+> Read more: [Pages Router](https://nextjs.org/docs/pages)
 
 ## Technologies Used
 

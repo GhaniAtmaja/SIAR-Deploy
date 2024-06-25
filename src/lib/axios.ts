@@ -6,7 +6,7 @@ import { UninterceptedApiError } from '@/types/api';
 
 const api = axios.create({
   // baseURL: 'https://siphalal-u9en3.ondigitalocean.app',
-  baseURL: 'http://localhost:3001', 
+  baseURL: 'http://localhost:3001',
   headers: {
     'Content-Type': 'application/json',
   },

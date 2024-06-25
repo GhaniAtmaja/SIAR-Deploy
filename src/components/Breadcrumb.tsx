@@ -16,7 +16,7 @@ const breadcrumbs = {
   '/status': 'Status Ajuan',
   '/surga': 'Surga Kuliner',
   '/toko': 'Toko Ornamen',
-  '/matching-list' : 'Ajuan Matching'
+  '/matching-list': 'Ajuan Matching',
 };
 type BreadcrumbProps = {
   crumbs: Array<keyof typeof breadcrumbs>;

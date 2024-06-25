@@ -1,6 +1,6 @@
 import { Theme } from '@radix-ui/themes';
+import { Inter as FontSans } from 'next/font/google';
 import * as React from 'react';
-import { Inter as FontSans } from "next/font/google"
 
 import '@radix-ui/themes/styles.css';
 
@@ -11,9 +11,9 @@ import Header from '@/components/layout/Header';
 import useDialogStore from '@/store/useDialogStore';
 
 const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-})
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   //#region  //*=========== Store ===========
@@ -26,9 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Header />
-      <Theme>
-      {children}
-      </Theme>
+      <Theme>{children}</Theme>
       <Footer />
       <BaseDialog
         onClose={handleClose}

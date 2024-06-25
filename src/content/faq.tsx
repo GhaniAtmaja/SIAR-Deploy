@@ -114,10 +114,10 @@ export const FAQ_CONTENT: FAQContentType[] = [
           'Bagaimana saya mengetahui kriteria produk yang memenuhi syarat sertifikasi halal?',
         description: (
           <>
-            Di aplikasi SIAR Halal, ada bagian 'Kriteria Sertifikasi' di mana Anda
-            bisa melihat semua kriteria yang harus dipenuhi oleh sebuah produk
-            untuk mendapatkan sertifikasi halal. Pastikan produk yang ingin
-            disertifikasi sesuai dengan kriteria yang telah ditetapkan.
+            Di aplikasi SIAR Halal, ada bagian 'Kriteria Sertifikasi' di mana
+            Anda bisa melihat semua kriteria yang harus dipenuhi oleh sebuah
+            produk untuk mendapatkan sertifikasi halal. Pastikan produk yang
+            ingin disertifikasi sesuai dengan kriteria yang telah ditetapkan.
           </>
         ),
       },
@@ -175,8 +175,8 @@ export const FAQ_CONTENT: FAQContentType[] = [
         description: (
           <>
             Tidak, Koin SIP yang Anda miliki tidak memiliki masa kadaluarsa dan
-            dapat Anda gunakan kapan saja selama Anda aktif di aplikasi
-            SIAR Halal.
+            dapat Anda gunakan kapan saja selama Anda aktif di aplikasi SIAR
+            Halal.
           </>
         ),
       },
